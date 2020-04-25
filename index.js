@@ -15,4 +15,10 @@ const io = socket(server);
 
 io.on("connection", (socket) => {
   console.log("something is not working fine", socket.id);
+
+  //   listening events
+  socket.on("chat", function (data) {
+    io.sockets.emit("chat", data);
+  });
+  
 });

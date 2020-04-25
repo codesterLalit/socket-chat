@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Sock-chat</title>
   </head>
   <body>
-    <h1>Welcome to paradise</h1>
+    <div id="socket-chat">
+      <div id="chat-window">
+        <div id="output"></div>
+      </div>
+      <input type="text" id="handle" placeholder="handle" />
+      <input type="text" id="message" placeholder="message" />
+      <button id="send">Send</button>
+    </div>
     <script src="chat-socket.js"></script>
   </body>
 </html>
